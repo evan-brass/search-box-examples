@@ -1,0 +1,39 @@
+html, body {
+	margin: 0;
+}
+
+main {
+	margin: 1em auto;
+	max-width: 85ch;
+}
+pre {
+	border: 1px solid black;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+	tab-size: 2ch;
+	padding: .5em;
+}
+#spinner {
+	width: 3em;
+	height: 3em;
+	margin: 0 auto;
+	background-color: red;
+	border-radius: 50%;
+	animation: linear infinite spin 2s;
+}
+#spinner::after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 1em;
+	height: 1em;
+	background-color: red;
+}
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
